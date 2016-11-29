@@ -13,6 +13,23 @@ describe('stringifyJSON', function() {
       var result = stringifyJSON(obj);
       expect(result).to.equal(expected);
     });
-
   });
+
+  it('Individual test for: 9', function() {
+    var test = 9;
+    var result = stringifyJSON(test);
+    var expected = JSON.stringify(test);
+    expect(result).to.equal(expected);
+  });
+
+  for(var i = 0; i < stringifiableObjects.length; i++) {
+    (function(i) {
+      it('Individual test for basic stuff: ' + stringifiableObjects[i], function() {
+        var test = stringifiableObjects[i];
+        var result = stringifyJSON(test);
+        var expected = JSON.stringify(test);
+        expect(result).to.equal(expected);
+      });
+    })(i);
+  }
 });

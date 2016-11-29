@@ -26,5 +26,4 @@ describe('getElementsByClassName', function() {
     });
     $('body').removeClass('targetClassName');
   });
-
 });
