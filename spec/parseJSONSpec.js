@@ -34,7 +34,7 @@ describe('parseJSON', function() {
     })(i);
   }
 
-  for(var i = 10; i < 15; i++) {
+  for(var i = 10; i < 20; i++) {
     (function(i) {
       it('Individual test for basic nesting: ' + parseableStrings[i], function() {
         var test = parseableStrings[i];
